@@ -72,3 +72,30 @@ class flower2:
         self.color_map = { 
             "d": (46, 184, 46) 
         }
+
+class Flower3:
+    def __init__(self, x, y):
+        self.position = np.array([x, y])
+        self.pixel_map = [
+            "....ee.......",
+            "...e..e.eee..",
+            "...e...e...e.",
+            ".eee...e...e.",
+            "e..ee......e.",
+            "e..........e.",
+            "e........ee..",
+            ".ee.......ee.",
+            "...ee.......e",
+            "...e...e....e",
+            "...e...ee..e.",
+            "...ee..e.eee.",
+            ".....ee......"
+            ]
+    def draw(self, draw_tool):
+        x_start, y_start = self.position
+        for y, row in enumerate(self.pixel_map):
+            for x, pixel in enumerate(row):
+                if pixel == "e":
+                    x0 = x_start + x * 4
+                    y0 = y_start + y * 4
+                    draw_tool.rectangle([x0, y0, x0 + 4, y0 + 4], fill = (255, 204, 0))
