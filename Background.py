@@ -10,10 +10,18 @@ class Bouble1:
             "aaaaa",
             ".aaa.",
             ]
-        self.color_map = {
-            "a": (102, 204, 255),    
-            "w": (255, 255, 255),    
-        }
+    def draw(self, draw_tool):
+        x_start, y_start = self.position
+        for y, row in enumerate(self.pixel_map):
+            for x, pixel in enumerate(row):
+                if pixel == "a":
+                    x0 = x_start + x * 5
+                    y0 = y_start + y * 5
+                    draw_tool.rectangle([x0, y0, x0 + 5, y0 + 5], fill = (102, 204, 255))
+                if pixel == "w":
+                    x0 = x_start + x * 5
+                    y0 = y_start + y * 5
+                    draw_tool.rectangle([x0, y0, x0 + 5, y0 + 5], fill = (255, 255, 255))
 
 class Bouble2:
     def __init__(self, x, y):
@@ -24,10 +32,18 @@ class Bouble2:
             "bbbb",
             ".bb.",
             ]
-        self.color_map = { 
-            "b": (77, 166, 255),    
-            "w": (255, 255, 255),    
-        }
+    def draw(self, draw_tool):
+        x_start, y_start = self.position
+        for y, row in enumerate(self.pixel_map):
+            for x, pixel in enumerate(row):
+                if pixel == "b":
+                    x0 = x_start + x * 4
+                    y0 = y_start + y * 4
+                    draw_tool.rectangle([x0, y0, x0 + 4, y0 + 4], fill = (77, 166, 255))
+                if pixel == "w":
+                    x0 = x_start + x * 4
+                    y0 = y_start + y * 4
+                    draw_tool.rectangle([x0, y0, x0 + 4, y0 + 4], fill = (255, 255, 255))
 
 class flower1:
     def __init__(self, x, y):
@@ -46,9 +62,14 @@ class flower1:
             "....c..c.....",
             ".....cc......",
             ]
-        self.color_map = { 
-            "c": (255, 153, 204) 
-        }
+    def draw(self, draw_tool):
+        x_start, y_start = self.position
+        for y, row in enumerate(self.pixel_map):
+            for x, pixel in enumerate(row):
+                if pixel == "c":
+                    x0 = x_start + x * 3
+                    y0 = y_start + y * 3
+                    draw_tool.rectangle([x0, y0, x0 + 3, y0 + 3], fill = (255, 153, 204))
 
 class flower2:
     def __init__(self, x, y):
@@ -69,9 +90,14 @@ class flower2:
             "...d...d...ddd.",
             "....ddd........"
             ]
-        self.color_map = { 
-            "d": (46, 184, 46) 
-        }
+    def draw(self, draw_tool):
+        x_start, y_start = self.position
+        for y, row in enumerate(self.pixel_map):
+            for x, pixel in enumerate(row):
+                if pixel == "d":
+                    x0 = x_start + x * 3
+                    y0 = y_start + y * 3
+                    draw_tool.rectangle([x0, y0, x0 + 3, y0 + 3], fill = (46, 184, 46))
 
 class Flower3:
     def __init__(self, x, y):
@@ -96,6 +122,6 @@ class Flower3:
         for y, row in enumerate(self.pixel_map):
             for x, pixel in enumerate(row):
                 if pixel == "e":
-                    x0 = x_start + x * 4
-                    y0 = y_start + y * 4
-                    draw_tool.rectangle([x0, y0, x0 + 4, y0 + 4], fill = (255, 204, 0))
+                    x0 = x_start + x * 3
+                    y0 = y_start + y * 3
+                    draw_tool.rectangle([x0, y0, x0 + 3, y0 + 3], fill = (255, 204, 0))
