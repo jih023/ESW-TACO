@@ -45,7 +45,7 @@ class Bouble2:
                     y0 = y_start + y * 4
                     draw_tool.rectangle([x0, y0, x0 + 4, y0 + 4], fill = (255, 255, 255))
 
-class flower1:
+class Flower1:
     def __init__(self, x, y):
         self.position = np.array([x, y])
         self.pixel_map = [
@@ -71,7 +71,7 @@ class flower1:
                     y0 = y_start + y * 3
                     draw_tool.rectangle([x0, y0, x0 + 3, y0 + 3], fill = (255, 153, 204))
 
-class flower2:
+class Flower2:
     def __init__(self, x, y):
         self.position = np.array([x, y])
         self.pixel_map = [
